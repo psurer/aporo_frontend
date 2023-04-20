@@ -1,0 +1,46 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.aporo-logo {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+
+header {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo-container {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        .logo-link {
+          display: flex;
+          align-items: center;
+          img {
+            height: 50px;
+            width: 50px;
+            object-fit: contain;
+          }
+        }
+      }
+      .menu-items {
+        display: flex;
+        align-items: center;
+        a {
+          margin-left: 10px;
+        }
+    }
+}
+}

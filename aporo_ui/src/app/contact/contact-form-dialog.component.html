@@ -1,0 +1,89 @@
+<!-- The contact form dialog -->
+<mat-dialog-content class="dialog-content">
+  <form [formGroup]="contactForm">
+    <!-- .dirty and .touched properties are used in Angular's form validation system.
+  The .dirty property indicates whether a user has interacted with a form control,
+   meaning that they have changed its value. 
+   If the control has been touched or modified, it will have a truthy value for .dirty.
+   
+   The .touched property, indicates whether a user has focused on and then left a form control.
+    If the control has been touched, it will have a truthy value for .touched.
+   These properties are often used in combination with Angular's form validation directives, 
+   such as ngIf and ngClass, to display error messages or apply styling to form controls based on their validity.
+    we might show an error message if a user leaves a required form control blank,
+     or apply a red border to a control if it is invalid. 
+-->
+    <!-- First Name input -->
+    <mat-form-field class="input-field" appearance="fill">
+      <mat-label for="firstName">First Name</mat-label>
+      <input matInput formControlName="firstName" id="firstName"  placeholder="First Name"
+        aria-label="First Name" />
+      <mat-error *ngIf="
+          contactForm.controls['firstName'].invalid &&
+          (contactForm.controls['firstName'].dirty ||
+            contactForm.controls['firstName'].touched)
+        "></mat-error>
+      Please enter your first name.
+    </mat-form-field>
+
+    <!-- Last Name input -->
+    <mat-form-field class="input-field" appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input matInput formControlName="lastName"  placeholder="Last Name" />
+      <mat-error *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+        Please enter your last name.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Email input -->
+    <mat-form-field class="input-field" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email" title="email" />
+      <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+        Please enter a valid email address.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Phone input -->
+    <mat-form-field class="input-field" appearance="fill">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone" ="false" title="First Name" />
+      <mat-error *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+        Please enter your phone number.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Region select -->
+    <mat-form-field class="input-field" appearance="fill">
+      <mat-label>Region</mat-label>
+      <mat-select formControlName="region" >
+        <mat-option *ngFor="let region of regions" [value]="region">{{
+          region
+          }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="region.invalid && (region.dirty || region.touched)">
+        Please select your region.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Industry input -->
+    <mat-form-field class="input-field" appearance="fill">
+      <mat-label>Industry</mat-label>
+      <input matInput formControlName="industry"  title="Industry" />
+      <mat-error *ngIf="industry.invalid && (industry.dirty || industry.touched)">
+        Please enter your industry.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- How can we help input -->
+    <mat-form-field class="input-field" appearance="fill">
+      <mat-label>How can we help?</mat-label>
+      <textarea matInput formControlName="howCanWeHelp" placeholder="Tell us how we can help you"></textarea>
+    </mat-form-field>
+  </form>
+
+  <!-- The send button -->
+  <button mat-raised-button color="primary" class="send-button" [disabled]="contactForm.invalid" (click)="onSubmit()">
+    Send
+  </button>
+</mat-dialog-content>

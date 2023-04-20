@@ -1,0 +1,18 @@
+<header>
+  <nav mat-toolbar color="primary">
+    <div class="logo-container">
+      <a routerLink="/" class="logo-link">
+        <img src="{{ logoUrl }}" alt="Logo" class="aporo-logo">
+      </a>
+    </div>
+    <a mat-button class="navbar-toggler">
+      <span class="navbar-toggler-icon"></span>
+    </a>
+    <div class="spacer"></div>
+    <div class="navbar-right">
+    <div class="menu-items">
+      <a mat-button *ngFor="let item of menuItems" [routerLink]="item.link">{{ item.label }}</a>
+    </div>
+  </div>
+  </nav>
+</header>
