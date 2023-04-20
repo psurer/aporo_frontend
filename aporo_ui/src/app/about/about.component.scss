@@ -40,9 +40,8 @@
       flex-wrap: wrap;
       justify-content: space-between;
     
-    //   our-values-image {
-    // //   // box-shadow: 0px 0px 2.5rem rgba(0, 0, 0, 0.1);
-    // // }
+    //   // box-shadow: 0px 0px 2.5rem rgba(0, 0, 0, 0.1);
+    
     
       .value-item {
         display: flex;
@@ -128,3 +127,22 @@
   font-weight: bold; 
   // box-shadow: 0px 0px 2.5rem rgba(0, 0, 0, 0.1);
 }
+
+.our-values-item {
+  // box-shadow: 0px 5px 10px #2d2d2d;
+  border-radius: 1rem;
+  padding: 30px;
+  margin-bottom: 6rem;
+  max-width: 100%;
+  padding: 5rem;
+  background-color: #fff;
+}
+
+      .our-values-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+
