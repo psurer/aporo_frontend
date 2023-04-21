@@ -1,18 +1,31 @@
 <header>
-  <nav mat-toolbar color="primary">
+  <nav mat-toolbar>
     <div class="logo-container">
       <a routerLink="/" class="logo-link">
         <img src="{{ logoUrl }}" alt="Logo" class="aporo-logo">
       </a>
+      <h1 class="aporo-logo-text">Aporo</h1>
     </div>
     <a mat-button class="navbar-toggler">
       <span class="navbar-toggler-icon"></span>
     </a>
     <div class="spacer"></div>
-    <div class="navbar-right">
-    <div class="menu-items">
-      <a mat-button *ngFor="let item of menuItems" [routerLink]="item.link">{{ item.label }}</a>
+    <div class="search-container">
+      <mat-form-field>
+        <input matInput type="text" placeholder="Search...">
+      </mat-form-field>
+      <!-- <a mat-button>
+        <mat-icon svgIcon="search">search</mat-icon>
+      </a> -->
     </div>
-  </div>
+
+    <div class="navbar-right">
+      <div class="menu-items">
+        <a mat-button *ngFor="let item of menuItems" [routerLink]="item.link">{{ item.label }}</a>
+        <!-- add contact button here -->
+      <a mat-button class="contact-button" routerLink="/contact">Contact Us</a> 
+    </div>
+    </div>
+
   </nav>
 </header>

@@ -1,6 +1,13 @@
 import { Component } from '@angular/core';
 // we import the Component decorator from the @angular/core module, which is used to define an Angular component.
 
+// The MenuItem interface defines the structure of each object in the menuItems array in the NavbarComponent class.
+// Each object represents a menu item that will be displayed in the navbar. It has two properties:
+interface MenuItem { 
+
+  label: string;
+  link: string;
+}
 // the @Component decorator is used to define the metadata of the component, such as the selector, template, and styles. In this case:
 // The selector property sets the name of the component's HTML tag, which is app-navbar.
 // The templateUrl property sets the location of the component's HTML template file, which is ./navbar.component.html.
@@ -23,7 +30,6 @@ export class NavbarComponent { //our main class of the component.
   public menuItems: Array<MenuItem> = [
     { label: 'Services', link: '/services' },
     { label: 'About', link: '/about' },
-    { label: 'Contact', link: '/contact' }
   ];
 
   /*  constructor() method is the default constructor of the class. It is empty here, as there is no initialization needed.
@@ -39,3 +45,5 @@ interface MenuItem {
   label: string;
   link: string;
 }
+
+
