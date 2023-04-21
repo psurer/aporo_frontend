@@ -25,7 +25,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
-import { MatIconModule } from '@angular/material';
+import { MatIconModule, MatMenuModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -54,6 +54,7 @@ import { MatIconModule } from '@angular/material';
     MatOptionModule,
     MatFormFieldModule,
     MatIconModule,
+    MatMenuModule,
   ],
   entryComponents: [ContactFormDialogComponent],
   providers: [],

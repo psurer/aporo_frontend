@@ -1,30 +1,38 @@
 <header>
   <nav mat-toolbar>
+
+    <!-- Aporo logo -->
     <div class="logo-container">
       <a routerLink="/" class="logo-link">
-        <img src="{{ logoUrl }}" alt="Logo" class="aporo-logo">
+        <img [src]="logoUrl" alt="Logo" class="aporo-logo"> <!-- use property binding to set the image source -->
       </a>
       <h1 class="aporo-logo-text">Aporo</h1>
     </div>
-    <a mat-button class="navbar-toggler">
-      <span class="navbar-toggler-icon"></span>
-    </a>
+
+    <!-- Hamburger button for dropdown menu -->
+    <button mat-icon-button class="navbar-toggler" (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <!-- Dropdown menu items -->
+    <div class="dropdown-menu-items" [class.open]="isMenuOpen"> <!-- use a class binding to toggle the menu visibility -->
+      <a mat-button *ngFor="let item of dropdownItems" [routerLink]="item.link">{{ item.label }}</a>
+    </div>
+
+    <!-- Search box -->
     <div class="spacer"></div>
     <div class="search-container">
       <mat-form-field>
         <input matInput type="text" placeholder="Search...">
       </mat-form-field>
-      <!-- <a mat-button>
-        <mat-icon svgIcon="search">search</mat-icon>
-      </a> -->
     </div>
 
+    <!-- Navbar items -->
     <div class="navbar-right">
-      <div class="menu-items">
-        <a mat-button *ngFor="let item of menuItems" [routerLink]="item.link">{{ item.label }}</a>
-        <!-- add contact button here -->
-      <a mat-button class="contact-button" routerLink="/contact">Contact Us</a> 
-    </div>
+      <a mat-button *ngFor="let item of menuItems" [routerLink]="item.link">{{ item.label }}</a>
+
+      <!-- Contact button -->
+      <a mat-button class="contact-button" routerLink="/contact">Contact Us</a>
     </div>
 
   </nav>
