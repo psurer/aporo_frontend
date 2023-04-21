@@ -49,4 +49,7 @@ onSubmit(): void {
     // Close the dialog without passing any data back to the parent component
     this.dialogRef.close();
   }
+  close() {
+    this.dialogRef.close();
+  }
 }

@@ -55,6 +55,7 @@ import { MatIconModule } from '@angular/material';
     MatFormFieldModule,
     MatIconModule,
   ],
+  entryComponents: [ContactFormDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

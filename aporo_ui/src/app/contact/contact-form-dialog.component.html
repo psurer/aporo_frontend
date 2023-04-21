@@ -1,6 +1,6 @@
 <!-- The contact form dialog -->
-<mat-dialog-content class="dialog-content">
-  <form [formGroup]="contactForm">
+<!-- <mat-dialog-content class="dialog-content">
+  <form [formGroup]="contactForm"> -->
     <!-- .dirty and .touched properties are used in Angular's form validation system.
   The .dirty property indicates whether a user has interacted with a form control,
    meaning that they have changed its value. 
@@ -13,6 +13,8 @@
     we might show an error message if a user leaves a required form control blank,
      or apply a red border to a control if it is invalid. 
 -->
+<mat-dialog-content class="dialog-content">
+  <form [formGroup]="contactForm">
     <!-- First Name input -->
     <mat-form-field class="input-field" appearance="fill">
       <mat-label for="firstName">First Name</mat-label>
@@ -86,4 +88,5 @@
   <button mat-raised-button color="primary" class="send-button" [disabled]="contactForm.invalid" (click)="onSubmit()">
     Send
   </button>
+  <button type="button" (click)="close()">Close</button>
 </mat-dialog-content>
