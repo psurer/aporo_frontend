@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fae5e5;
+  background-color: #ffffff;
   padding: 6rem;
   font-family: 'Montserrat', sans-serif;
 
@@ -40,13 +40,13 @@
       flex-wrap: wrap;
       justify-content: space-between;
     
-    //   // box-shadow: 0px 0px 2.5rem rgba(0, 0, 0, 0.1);
+      // box-shadow: 0px 0px 2.5rem rgba(0, 0, 0, 0.1);
     
     
       .value-item {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         max-width: 35rem;
         width: 100%;
@@ -77,16 +77,16 @@
           color: #666666;
         }
       }
-
-    .cta-container {
+    }
+    .get-in-touch-container {
       max-width: 800px;
       width: 100%;
       margin-top: 80px;
       padding: 60px;
       border-radius: 10px;
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-      background-color: #ff6c64;
-      color: #fff;
+      background-color: #f1eeee;
+      color: #373737;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -104,9 +104,9 @@
         margin-bottom: 30px;
       }
 
-      .btn {
-        background-color: #fff;
-        color: #ff6c64;
+      .get-in-touch-btn {
+        background-color: #de390b;
+        color: #000000;
         font-size: 1.2rem;
         font-weight: 700;
         border-radius: 5px;
@@ -118,7 +118,7 @@
           color: #fff;
         }
       }
-    }
+    
   
    
 }

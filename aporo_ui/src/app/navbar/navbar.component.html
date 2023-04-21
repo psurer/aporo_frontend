@@ -18,10 +18,14 @@
         <mat-icon svgIcon="search">search</mat-icon>
       </a> -->
     </div>
+
     <div class="navbar-right">
       <div class="menu-items">
         <a mat-button *ngFor="let item of menuItems" [routerLink]="item.link">{{ item.label }}</a>
-      </div>
+        <!-- add contact button here -->
+      <a mat-button class="contact-button" routerLink="/contact">Contact Us</a> 
     </div>
+    </div>
+
   </nav>
 </header>
