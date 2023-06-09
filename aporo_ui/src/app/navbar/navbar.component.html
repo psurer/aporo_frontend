@@ -13,11 +13,13 @@
     <button mat-icon-button class="navbar-toggler" (click)="toggleMenu()">
       <mat-icon>menu</mat-icon>
     </button>
+    <a mat-button *ngFor="let item of menuItems" [routerLink]="item.link">{{ item.label }}</a>
 
     <!-- Dropdown menu items -->
-    <div class="dropdown-menu-items" [class.open]="isMenuOpen"> <!-- use a class binding to toggle the menu visibility -->
-      <a mat-button *ngFor="let item of dropdownItems" [routerLink]="item.link">{{ item.label }}</a>
-    </div>
+    <!-- <div class="dropdown-menu-items" [class.open]="isMenuOpen">  -->
+      <!-- use a class binding to toggle the menu visibility -->
+      <!-- <a mat-button *ngFor="let item of dropdownItems" [routerLink]="item.link">{{ item.label }}</a> -->
+    <!-- </div> -->
 
     <!-- Search box -->
     <div class="spacer"></div>
@@ -29,8 +31,6 @@
 
     <!-- Navbar items -->
     <div class="navbar-right">
-      <a mat-button *ngFor="let item of menuItems" [routerLink]="item.link">{{ item.label }}</a>
-
       <!-- Contact button -->
       <a mat-button class="contact-button" routerLink="/contact">Contact Us</a>
     </div>

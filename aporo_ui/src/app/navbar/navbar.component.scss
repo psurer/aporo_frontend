@@ -9,6 +9,11 @@ header {
   background-color: $bg-color;
   height: 64px;
   box-shadow: $shadow-color;
+  display: inline-flex;
+  align-items: center;
+  float: right;
+  height: 100%;
+  text-align: right;
 
   nav {
     display: flex;
@@ -16,6 +21,20 @@ header {
     justify-content: space-around;
     height: 100%;
     padding: 10 24px;
+
+    .ul { 
+      height: 100%;
+      display: flex;
+      width: auto;
+    }
+
+    .li { 
+      display: flex;
+      align-items: center;
+      margin: 0;
+      height: 65px;
+      box-sizing: content-box;
+    }
 
     .logo-container {
       display: flex;

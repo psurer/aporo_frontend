@@ -16,6 +16,7 @@
     // background-color: #fff;
     // color: #343434;
     padding: 4rem;
+    width: 100%;
 
     h1 {
       font-size: 3.8rem;
@@ -25,6 +26,11 @@
     }
 
     p {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
       font-size: 1.8rem;
       line-height: 2.8rem;
       margin-bottom: 3rem;
@@ -38,7 +44,7 @@
       margin-top: 5rem;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
     
       // box-shadow: 0px 0px 2.5rem rgba(0, 0, 0, 0.1);
     
@@ -130,6 +136,7 @@
 
 .our-values-item {
   // box-shadow: 0px 5px 10px #2d2d2d;
+  flex: 1;
   border-radius: 1rem;
   padding: 30px;
   margin-bottom: 6rem;
